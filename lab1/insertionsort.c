@@ -20,9 +20,16 @@ void printArray(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {12, 11, 13, 5, 6};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements of the array:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
     insertionSort(arr, n);
+    printf("Sorted array: ");
     printArray(arr, n);
     return 0;
 }
